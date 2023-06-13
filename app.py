@@ -195,4 +195,4 @@ with gr.Blocks() as demo:
         btn.click(question_answer, inputs=[
                   url, file, question, openAI_key], outputs=[answer])
 
-app = demo.launch()
+app = demo.launch(share=True, server_name="0.0.0.0", server_port=8000)
